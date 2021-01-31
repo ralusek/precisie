@@ -30,7 +30,7 @@ type Config = {
   magnitude?: number;
 };
 
-class PreciseNumber {
+export default class PreciseNumber {
   constructor(
     input: string,
     { magnitude = 0 }: Config = {},

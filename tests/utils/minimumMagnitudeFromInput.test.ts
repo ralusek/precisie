@@ -21,7 +21,7 @@ describe('Invocation', () => {
 
     expect(minimumMagnitudeFromInput({ whole: '00', fractional: '00', magnitude: -2, sign: '' })).to.nested.include({
       value: BigInt('0'),
-      magnitude: -3,
+      magnitude: 0,
     });
 
     expect(minimumMagnitudeFromInput({ whole: '1000', fractional: '', magnitude: 0, sign: '' })).to.nested.include({

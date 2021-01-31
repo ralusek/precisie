@@ -22,6 +22,6 @@ export default ({
   
   return {
     value: BigInt(withoutTrailingZeroes),
-    magnitude: magnitudeIncludingFractional - magnitudeReduction,
+    magnitude: withoutTrailingZeroes === '0' ? 0 : magnitudeIncludingFractional - magnitudeReduction,
   };
 };
