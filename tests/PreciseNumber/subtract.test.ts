@@ -43,5 +43,14 @@ describe('Invocation', () => {
     });
     expect(result.toString({ magnitude: 2 })).to.equal('-1287');
     expect(result.toString({ magnitude: 0 })).to.equal('-12.87');
+
+    a = new PreciseNumber('0.00');
+    result = a.subtract(new PreciseNumber('23.1'));
+    expect(result).to.nested.include({
+      value: BigInt(-2310),
+      magnitude: 2,
+    });
+    expect(result.toString({ magnitude: 2 })).to.equal('-2310');
+    expect(result.toString({ magnitude: 0 })).to.equal('-23.10');
   });
 });
