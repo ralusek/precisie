@@ -16,6 +16,6 @@ export default (
   
   return {
     magnitude,
-    value: value * (BigInt(10) ** BigInt(increaseInMagnitude)),
+    value: value * (BigInt(10) ** BigInt(increaseInMagnitude)), // tested, this is faster than padding, largely because of .toString call
   };
 };
