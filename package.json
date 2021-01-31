@@ -1,0 +1,61 @@
+{
+  "name": "precisie",
+  "version": "0.0.0",
+  "description": "A BigInt precision math library with TypeScript types.",
+  "keywords": [
+    "big int",
+    "bigint",
+    "precision",
+    "arbitrary",
+    "math",
+    "arithmetic",
+    "currency",
+    "money",
+    "fiat",
+    "accounting",
+    "decimal",
+    "floating point",
+    "exact",
+    "precise",
+    "correct",
+    "banking"
+  ],
+  "author": "Tomas Savigliano",
+  "license": "MIT",
+  "main": "./lib/index.js",
+  "files": [
+    "/lib"
+  ],
+  "scripts": {
+    "build": "npx ttsc",
+    "start": "npm run build",
+    "test": "npm run build && mocha -r ts-node/register tests/**/*.test.ts",
+    "prettify": "npx prettier --write '**/*.ts'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && npm run build"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/chai": "^4.2.11",
+    "@types/mocha": "^7.0.2",
+    "@types/node": "12.7.5",
+    "@types/uuid": "3.4.5",
+    "@types/validator": "10.11.3",
+    "bluebird": "3.7.2",
+    "chai": "4.2.0",
+    "husky": "4.2.5",
+    "mocha": "7.1.2",
+    "prettier": "2.0.5",
+    "pretty-quick": "2.0.1",
+    "ts-node": "^8.10.1",
+    "tslint": "5.20.1",
+    "tslint-config-prettier": "1.18.0",
+    "tslint-plugin-prettier": "2.0.1",
+    "ttypescript": "^1.5.12",
+    "typescript": "^4.1.3",
+    "typescript-transform-paths": "^1.1.14"
+  }
+}
